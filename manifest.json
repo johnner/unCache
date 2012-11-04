@@ -1,6 +1,6 @@
 {
     "name": "unCache",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "manifest_version": 2,
     "description": "Clear cache and browser local storage.",
     "options_page": "options.html",
