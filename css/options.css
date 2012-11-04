@@ -1,0 +1,15 @@
+body {
+    background: url(/img/dust.png) repeat;
+}
+h1 {
+    font: 1.75em/3.0em "Lucida Grande", Verdana, Tahoma, Helvetica, Arial, sans-serif;
+    width: 500px;
+    border-bottom: 1px solid #DDD;
+    margin-left: auto;
+    margin-right: auto;
+    color: #2f416b;
+}
+.wrapper {
+    text-align: center;
+    margin: 0 50px;
+}
