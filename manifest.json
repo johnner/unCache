@@ -3,19 +3,21 @@
     "version": "0.2.1",
     "manifest_version": 2,
     "description": "Clear cache and browser local storage.",
+    "options_page": "options.html",
     "background": {
         "persistent": false,
         "page": "background.html"
     },
     "browser_action": {
-        "default_icon": "logo.png",
+        "default_icon": "img/logo.png",
         "default_title": "Clear all cache and local storage"
     },
 
     "icons": {
-        "clean": "logo_clean.png",
-        "128": "icon128.png"
+        "clean": "img/logo_clean.png",
+        "128": "img/icon128.png"
     },
+
     "permissions": [
         "alarms",
         "*://*/",
