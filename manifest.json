@@ -19,11 +19,20 @@
     },
 
     "permissions": [
-        "alarms",
         "*://*/",
         "browsingData",
         "storage",
         "history"
     ],
+
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["js/keycatcher.js"]
+        }
+    ],
+
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+
+
 }
