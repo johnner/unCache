@@ -7,8 +7,9 @@ var unCache = {
     clearCache: function () {
         var millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
         var oneWeekAgo = (new Date()).getTime() - millisecondsPerWeek;
+        var all = 0;
         chrome.browsingData.remove({
-            "since": oneWeekAgo
+            "since": all
         }, {
             "appcache": true,
             "cache": true,
@@ -26,8 +27,6 @@ var unCache = {
         this.setDoneIcon();
 
         setTimeout(this.setDefaultIcon, 3000);
-
-        _gaq.push(['_trackEvent', 'clearCache', 'clicked']);
     },
 
     storageChanged: function (history_item) {

@@ -1,8 +1,8 @@
 {
     "name": "unCache",
-    "version": "0.2.2",
+    "version": "0.3.1",
     "manifest_version": 2,
-    "description": "Clear cache and browser local storage.",
+    "description": "Clear cache and browser local storage with one click or hotkey",
     "options_page": "options.html",
     "background": {
         "persistent": false,
