@@ -1,6 +1,6 @@
 (function () {
     var storage = chrome.storage.sync,
-        pattern,
+        pattern = [],
         pressed = 0,
         matched = 0;
 
