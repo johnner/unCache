@@ -5,9 +5,11 @@
         matched = 0;
 
     storage.get('pattern', function (items) {
-        if (items.pattern.length) {
-            pattern = items.pattern;
-        }
+	if (items) {
+	    if (items.pattern && items.pattern.length) {
+    	        pattern = items.pattern;
+	    }
+	}
     });
 
     window.addEventListener("keydown", keySender, false);
