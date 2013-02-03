@@ -4,13 +4,19 @@
         pressed = 0,
         matched = 0;
 
-    storage.get('pattern', function (items) {
-	if (items) {
-	    if (items.pattern && items.pattern.length) {
-    	        pattern = items.pattern;
-	    }
-	}
-    });
+    //Bugfix for http://code.google.com/p/chromium/issues/detail?id=151838
+    if (document.doctype !== null){
+        storage.get('pattern', function (items) {
+            try {
+                if (items && items.pattern && items.pattern.length) {
+                    pattern = items.pattern;
+                }
+            } catch (e) {
+                return;
+            }
+        });
+    }
+
 
     window.addEventListener("keydown", keySender, false);
     function keySender (e) {
@@ -30,7 +36,7 @@
     function keyUp (e) {
         pressed = 0;
         var keyCode = e.keyCode || e.which;
-        if (pattern.indexOf(keyCode) != -1) {
+        if (pattern.indexOf(keyCode) !== -1) {
             matched = 0;
         }
         if (pressed == 0) {
