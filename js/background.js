@@ -1,6 +1,5 @@
 var unCache = {
     checkCacheCleared: function () {
-        console.log('Clearing cache...');
         this.clearCache();
     },
 
@@ -44,12 +43,9 @@ var unCache = {
             path: "img/logo_clean.png"
         });
     },
-    checKey: function (e) {
-        alert('key pressed');
-    }
+    checKey: function (e) {}
 };
 chrome.extension.onMessage.addListener(function (request, sender, sendResponse) {
-    console.log('clear cache!!', request.clear);
     if (request.clear === 1) {
         unCache.clearCache.apply(unCache);
     }
@@ -57,4 +53,3 @@ chrome.extension.onMessage.addListener(function (request, sender, sendResponse) 
 
 chrome.browserAction.onClicked.addListener(unCache.checkCacheCleared.bind(unCache));
 chrome.history.onVisited.addListener(unCache.storageChanged.bind(unCache));
-//chrome.storage.onChanged.addListener();
