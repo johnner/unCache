@@ -1,4 +1,3 @@
-
 (function () {
     var storage = chrome.storage.sync,
         pattern = [],
@@ -38,15 +37,7 @@
     window.addEventListener("keyup", keyUp, false);
     function keyUp (e) {
         pressed = 0;
-        var keyCode = e.keyCode || e.which;
-        if (pattern) {
-            if (pattern.indexOf(keyCode) !== -1) {
-                matched = 0;
-            }
-            if (pressed == 0) {
-                matched = 0;
-            }
-        }
+        matched = 0;
     }
 
 })();
